@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #232323;
+}
+
+.card {
+  width: 50%;
+  max-width: 400px;
+  background: linear-gradient(
+    135deg,
+    rgba(238, 174, 202, 1) 5%,
+    rgba(174, 28, 206, 1) 100%
+  );
+  border-radius: 20px;
+  color: #fff;
+  padding: 32px 31px;
+  margin: 64px auto 0;
+  text-align: center;
+}
+.weather input {
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 30px;
+  flex: 1;
+  /* flex;1 takes maximum width
+  empty space nhi rehti */
+  margin-right: 16px;
+}
+
+.weather {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.weather button {
+  height: 45px;
+  width: 45px;
+  padding: 15px;
+  border-radius: 100px;
+  border: none;
+}
+.weather button img {
+  height: 100%;
+  /*container mai jitni available height hai utni le lega pura  parent height */
+}
+.weather-icon {
+  width: 170px;
+  margin: 30px;
+}
+.weather-info h1 {
+  font-size: 75px;
+  font-weight: 500;
+}
+.weather-info h2 {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+  align-items: center;
+  padding: 0 25px;
+}
+.col {
+  /* which specifies how much of the available space within a container an element should take up, relative to the other elements. */
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+  text-align: left;
+}
+.col img {
+  width: 30px;
+  margin-right: 10px;
+}
+.humidity,
+.wind {
+  font-size: 25px;
+  margin-top: 20px;
+  /* font-weight: 100; */
+}
+.row {
+  margin-top: -10px;
+}
+
+.weather button:hover {
+  background-color: rgb(201, 197, 185);
+}
+.weather-info {
+  display: none;
+}
+.error {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
+@media (min-width: 300px) and (max-width: 767px) {
+  .card {
+    width: 90%;
+    margin: 20px;
+  }
+  .details {
+    padding: 0;
+    justify-content: space-between;
+  }
+
+  .col img {
+    width: 25px;
+  }
+  .row p {
+    /* margin-top: 0; */
+    font-size: 15px;
+  }
+}
